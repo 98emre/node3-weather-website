@@ -14,9 +14,11 @@ const forecast = (latitude, longitude,callback) =>{
 
         else{
             callback(undefined,{
-                //latitude: res.body.location.lat,
-                //longitude: res.body.location.lon,
-                location: body.location.name
+                location: body.location.name,
+                temperature: body.current.temperature,
+                latitude: body.location.lat,
+                longitude: body.location.lon,
+                localtime: body.location.localtime,
             });
         }
     });
